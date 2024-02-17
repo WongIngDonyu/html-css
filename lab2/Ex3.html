@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stylized tables</title>
+    <style>
+        body{
+            padding: 100px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid rgb(222, 222, 222);
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        th, td {
+            border: 1px solid rgb(222, 222, 222);
+            padding: 8px;
+        }
+
+        tr:nth-child(2n) {
+            background-color: rgb(240, 240, 240);
+        }
+        th {
+            background-color: rgb(222, 222, 222);
+            text-align: left;
+        }
+        tr:hover {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+    <th><strong>Country</strong></th>
+    <th><strong>Population</strong></th>
+        <th><strong>Score</strong></th>
+    </tr>
+    <tr><td>Somewhere</td>	<td>3M</td>	<td>25</td></tr>
+    <tr><td>Somewhere else</td>	<td>12M</td>	<td>125</td></tr>
+    <tr><td>That place</td><td>	23M</td>	<td>235</td></tr>
+    <tr><td>Somewhere</td>	<td>3M</td>	<td>25</td></tr>
+    <tr><td>Somewhere else</td>	<td>12M</td>	<td>125</td></tr>
+    <tr><td>That place</td>	<td>23M</td>	<td>235</td></tr>
+    <tr><td>Somewhere</td>	<td>3M</td>	<td>25</td></tr>
+    <tr><td>Somewhere else</td>	<td>12M</td>	<td>125</td></tr>
+    <tr><td>That place</td>	<td>23M</td>	<td>235</td></tr>
+    </table>
+</body>
+</html>
