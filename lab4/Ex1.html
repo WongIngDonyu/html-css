@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexible Layout</title>
+    <style>
+        body{
+            display: flex;
+            background-color: rgb(222, 220, 220);
+            margin: 50px;
+            padding: 10px;
+            flex-direction: column;
+            gap: 10px;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        header{
+            flex-grow: 10;
+            flex-shrink: 1;
+            flex-basis: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 0 5px gray;
+            background-color: white;
+            padding: 30px;
+        }
+        .main-aside {
+            display: flex;
+            flex-grow: 1;
+            flex-basis: 400px;
+            gap: 30px;
+        }
+        main{
+            flex-grow: 10;
+            flex-shrink: 1;
+            flex-basis: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px gray;
+            background-color: white;
+            padding: 30px;
+        }
+        aside{
+            flex-grow:10 ;
+            flex-shrink: 1;
+            flex-basis: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px gray;
+            background-color: white;
+            padding: 30px;
+        }
+        footer{
+            flex-grow: 10;
+            flex-shrink:1 ;
+            flex-basis: 100px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px gray;
+            background-color: white;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    HEADER
+</header>
+<br>
+<section class="main-aside">
+    <main>
+        MAIN
+    </main>
+    <aside>
+        ASIDE
+    </aside>
+</section>
+<br>
+<footer>
+    FOOTER
+</footer>
+</body>
+</html>
