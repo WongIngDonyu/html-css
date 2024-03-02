@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Стилизованная статья</title>
+<style>
+    table
+    {
+        width: 100%;
+        border: 1px solid rgb(222, 222, 222);
+        border-collapse: collapse;
+    }
+    td
+    {
+        border-bottom: 1px solid rgb(222, 222, 222);
+        border-collapse: collapse;
+    }
+    th
+    {
+        border-bottom: 1px solid rgb(222, 222, 222);
+        border-collapse: collapse;
+    }
+    tr
+    {
+        border-bottom: 1px solid rgb(222, 222, 222);
+        border-collapse: collapse;
+    }
+    th
+    {
+        background-color: rgb(50,50,50);
+        color: white;
+    }
+    tr:hover
+    {
+        background-color: rgb(50,50,50);
+        color: white;
+    }
+
+    @media screen and (min-width: 900px) {
+        th
+        {
+            background-color: rgb(50,50,50);
+            color: white;
+            padding-left: 10px;     
+        }
+        td{
+            width: 33%;
+            text-align: center;
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width:900px) {
+        thead
+        {
+            display: none;
+        }
+        td{
+            display: block;
+            text-align: left;
+            padding-left: 20px;
+            font-weight: normal;
+        }
+        td::before
+        {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+    }
+</style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>            
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="First Name">James</td>
+                <td data-label="Last Name">Matman</td>
+                <td data-label="Job Title">Cheif Sendvich Eater</td>
+            </tr>
+            <tr>
+                <td data-label="First Name">Jon</td>
+                <td data-label="Last Name">Doe</td>
+                <td data-label="Job Title">Cheif Executive Eater</td>
+            </tr>
+           </tbody>
+    </table>
+</body>
+</html>

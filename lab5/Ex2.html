@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adaptive Form</title>
+    <style>
+        body{
+            font-family: 'Helvetica', sans-serif;
+        }
+        .form
+        {
+            background-color: rgb(242, 241, 241);
+            position: relative;
+            margin: 10vw auto;
+            border: 1px solid rgb(174, 173, 173);
+            border-radius: 5px;
+            box-shadow: 1px 1px 8px 0 rgba(34, 60, 80, 0.2);
+            min-width: 300px;
+            min-height: 225px;
+        }
+
+        .fields
+        {
+            margin: -2vw 0 0 0;
+            position: relative;
+            align-items: center;
+            padding: 0 0 0 1vw;
+        }
+
+        .login-title
+        {
+            background-color: rgb(242, 241, 241);
+            position: relative;
+            top: -2.5vw;
+            left: -0.09vw;
+            padding: 0 0 5px 5px;
+            border: 1px solid rgb(174, 173, 173);
+            display: flex;
+            height: 100vh;
+            border-radius: 3px;
+            box-shadow: 1px 1px 8px 0 rgba(34, 60, 80, 0.2);
+            min-width: 100px;
+            min-height: 35px;
+        }
+
+        .username
+        {
+            padding: 1vw 0 2vw 0;
+        }
+
+        .password
+        {
+            padding: 0 0 1vw 0;
+        }
+
+        .login-text
+        {
+            position: absolute;
+            top: calc(50% - 129px * .3);
+            left: calc(50% - 129px * .3);
+            margin-bottom: 0;
+            bottom: 100vw;
+        }
+
+        p
+        {
+            font-size: 25px;
+        }
+
+        .username-inline
+        {
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url(img/user.png);
+            background-size: 10% 80%;
+            padding-left: 40px;
+            width: 15vw;
+            height: 1.5vw;
+            border: 1px solid rgb(174, 173, 173);
+            border-radius: 4px;
+            min-width: 235px;
+            min-height: 30px;
+        }
+        .password-inline
+        {
+            background-repeat: no-repeat;
+            background-position: -8px  center;
+            background-image: url(img/key.jpg);
+            background-size: 15% 100%;
+            padding-left: 40px;
+            width: 15vw;
+            height: 1.5vw;
+            margin: 0 0 0 5px;
+            border: 1px solid rgb(174, 173, 173);
+            border-radius: 5px;
+            min-width: 235px;
+            min-height: 30px;
+        }
+
+        .username-label
+        {
+            font-size: 25px;
+            font-weight: bold;
+            min-width: 100px;
+        }
+        .password-label
+        {
+            font-size: 25px;
+            font-weight: bold;
+            min-width: 100px;
+        }
+        button
+        {
+            position: relative;
+            width: 5vw;
+            height: 2vw;
+            background-color: rgb(48, 48, 48);
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 76px;
+            min-height: 30px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .form
+            {
+                width: 30vw;
+                height: 5vw;
+            }
+            .login-title
+            {
+                width: 10vw;
+                height: 2.5vw;
+                bottom: 10vw;
+            }
+
+        }
+
+        @media screen and (min-width: 100px) and (max-width: 1200px) {
+            .form
+            {
+                width: 20vw;
+                height: 15vw;
+            }
+            .login-title
+            {
+                width: 5vw;
+                height: 1.5vw;
+                bottom: 10vw;
+            }
+            .password-inline
+            {
+                margin: 0;
+            }
+            .login-title
+            {
+                top: -1.5vw;
+                left: -0.1vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="form">
+    <div class="login-title">
+        <p class="login-text">Login</p>
+    </div>
+    <div class="fields">
+        <div class="username">
+            <label for="username" class="username-label">Username</label>
+            <input type="text" id="username" class="username-inline">
+        </div>
+        <div class="password">
+            <label for="password" class="password-label">Password</label>
+            <input type="password" id="password" class="password-inline">
+        </div>
+        <button>Login</button>
+    </div>
+</div>
+</body>
+</html>

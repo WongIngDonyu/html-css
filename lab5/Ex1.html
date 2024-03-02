@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction Media Queries</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .first-span::after
+        {
+            content: "Viewport width is larger than 600px";
+            color: green;
+        }
+        @media(max-width: 600px)
+        {
+            .first-span::after
+            {
+                display: none;
+            }
+        }
+        .second-span::after
+        {
+            content: "Viewport height is larger than 600px";
+            color: green;
+        }
+        @media(max-height: 600px)
+        {
+            .second-span::after
+            {
+                display: none;
+            }
+        }
+        .third-span::after
+        {
+            content: "Aspect Ratio is larger than 8/5";
+            color: green;
+        }
+        @media(max-aspect-ratio: 8/5)
+        {
+            .third-span::after
+            {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+<span>
+    <span class="first-span">MQ Width:</span>
+</span>
+</section>
+<section>
+<span>
+    <span class="second-span">MQ Height:</span>
+</span>
+</section>
+<section>
+<span>
+    <span class="third-span">MQ Aspect Ratio:</span>
+</span>
+</section>
+</body>
+</html>
